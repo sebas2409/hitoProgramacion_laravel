@@ -16,7 +16,13 @@
             </div>
         </div>
     </nav>
-    <form action="" method="post" id="formulario">
+    <header class="masthead bg-secondary text-white text-center py-4">
+        <div class="container d-flex align-items-center flex-column">
+            <h2>Si no tienes una cuenta, debes registrarte primero</h2>
+        </div>
+    </header>
+    <form method="GET" action="" id="formulario">
+        @csrf
         <div class="form-group">
             <div class="input-group">
                 <div class="input-group-prepend">
@@ -37,7 +43,7 @@
         </div>
 
         <div class="col-12 mt-3" id="boton-registrarse">
-            <button class="btn btn-primary" type="submit" name="iniciarSesion">Iniciar sesión</button>
+            <button class="btn btn-primary" type="submit" id="iniciarSesion" name="iniciarSesion">Iniciar sesión</button>
         </div>
     </form>
 @endsection

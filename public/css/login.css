@@ -11,3 +11,7 @@
 #crearCuenta{
     float: right;
 }
+#leyenda{
+    color: red;
+    visibility: hidden;
+}

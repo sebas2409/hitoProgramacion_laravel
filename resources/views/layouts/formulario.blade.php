@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+    <script src="{{ mix('js/app.js') }}"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
     <title>@yield('title','Welcome')</title>
 </head>
 <body>

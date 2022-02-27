@@ -16,14 +16,16 @@
             </div>
         </div>
     </nav>
-    <form action="" method="post" id="formulario">
+    <form method="POST" action="{{ route('clients.store') }}" id="formulario"> <!--todo! Muy importante poner el post en primer lugar, en mayusculas -->
+        @csrf
         <div class="form-group">
+            <p id="leyenda">Nombre de usuario en uso</p>
             <div class="input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text">👤</span>
                 </div>
                 <label for="usuario"></label>
-                <input type="text" class="form-control" placeholder="Usuario" name="usuario" id="usuario" required>
+                <input type="text" class="form-control" placeholder="Usuario" name="usuario" onblur="comprobar()" id="usuario" required>
             </div>
         </div>
         <div class="form-group mt-3">
@@ -47,15 +49,15 @@
         </div>
         <div class="form-group mt-3">
             <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">🔗</span>
-                </div>
                 <label for="link"></label>
                 <input type="url" class="form-control" placeholder="Ingrese el link" name="link" id="link" required>
+                <div class="input-group-append">
+                    <span class="input-group-text">🔗</span>
+                </div>
             </div>
         </div>
         <div class="col-12 mt-3" id="boton-registrarse">
-            <button class="btn btn-primary" type="submit" name="registrarse">Crear cuenta</button>
+            <button class="btn btn-primary" id="registrarse" type="submit" name="registrarse">Crear cuenta</button>
         </div>
     </form>
 @endsection
