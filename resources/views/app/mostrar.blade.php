@@ -22,7 +22,11 @@
             <td>{{ $user->getCreatedAt() }}</td>
             <td>{{ $user->getUpdate() }}</td>
             <td><a href="{{ route('user.show',['id'=>$user->getId()]) }}" class="btn btn-primary"><i class="bi bi-pencil"></i></a></td>
-            <td><a class="btn btn-danger"><i class="bi bi-trash"></i></a></td>
+            <td><form method="POST" action="{{ route('user.deleteNormal',$user->getId()) }}">
+                    @csrf
+                    @method('DELETE')
+                    <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
+                </form></td>
 
         </tr>
         </tbody>
