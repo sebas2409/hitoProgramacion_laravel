@@ -7,7 +7,7 @@ function comprobar() {
             let valor =false;
             let input = document.getElementById('usuario').value;
             for (let i = 0; i < r.length; i++) {
-                if (input===r[i]['usuario']){
+                if (input===r[i]['users']){
                     valor=true;
                 }
             }
@@ -25,4 +25,5 @@ function comprobar() {
             }
         }
     })
+
 }

@@ -11,7 +11,7 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
                     <a class="nav-link active" href="{{ route('login') }}">Acceso</a>
-                    <a class="nav-link active" href="{{ route('registro') }}">Regsitro</a>
+                    <a class="nav-link active" href="{{ route('registro') }}">Registro</a>
                 </div>
             </div>
         </div>
@@ -21,15 +21,18 @@
             <h2>Si no tienes una cuenta, debes registrarte primero</h2>
         </div>
     </header>
-    <form method="GET" action="" id="formulario">
+    <form method="GET" action="{{ route('login.comprobar') }}" id="formulario">
         @csrf
         <div class="form-group">
+            @if( session('error'))
+                <p class="alert alert-danger">{{ session('error') }}</p>
+            @endif
             <div class="input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text">👤</span>
                 </div>
                 <label for="usuario"></label>
-                <input type="text" class="form-control" placeholder="Usuario" name="usuario" id="usuario">
+                <input type="text" class="form-control" placeholder="Usuario" name="usuario" id="usuario" required>
             </div>
         </div>
         <div class="form-group mt-3">
@@ -38,12 +41,12 @@
                     <span class="input-group-text">🔐</span>
                 </div>
                 <label for="password"></label>
-                <input type="password" class="form-control" placeholder="Contraseña" name="password" id="password">
+                <input type="password" class="form-control" placeholder="Contraseña" name="password" id="password" required>
             </div>
         </div>
 
         <div class="col-12 mt-3" id="boton-registrarse">
-            <button class="btn btn-primary" type="submit" id="iniciarSesion" name="iniciarSesion">Iniciar sesión</button>
+            <button class="btn btn-primary bg-primary" type="submit" id="iniciarSesion" name="iniciarSesion">Iniciar sesión</button>
         </div>
     </form>
 @endsection

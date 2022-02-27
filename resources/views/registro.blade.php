@@ -11,7 +11,7 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
                     <a class="nav-link active" href="{{ route('login') }}">Acceso</a>
-                    <a class="nav-link active" href="{{ route('registro') }}">Regsitro</a>
+                    <a class="nav-link active" href="{{ route('registro') }}">Registro</a>
                 </div>
             </div>
         </div>
@@ -57,7 +57,7 @@
             </div>
         </div>
         <div class="col-12 mt-3" id="boton-registrarse">
-            <button class="btn btn-primary" id="registrarse" type="submit" name="registrarse">Crear cuenta</button>
+            <button class="btn btn-primary bg-primary" id="registrarse" type="submit" name="registrarse">Crear cuenta</button>
         </div>
     </form>
 @endsection

@@ -11,16 +11,16 @@ use Illuminate\Http\Request;
 
 class ClientsController extends Controller
 {
-    public function store(Request $request): Application|Factory|View
+    public function store(Request $request): RedirectResponse
     {
 
         $nuevoCliente = new Client();
-        $nuevoCliente->usuario=$request->usuario;
+        $nuevoCliente->users=$request->usuario;
         $nuevoCliente->email=$request->email;
         $nuevoCliente->password=$request->password;
         $nuevoCliente->link=$request->link;
         $nuevoCliente->save();
 
-        return view('login');
+        return redirect()->route('login');
     }
 }
