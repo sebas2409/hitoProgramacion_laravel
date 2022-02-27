@@ -19,23 +19,25 @@
         </button>
     </div>
 </nav>
-<form id="formulario">
+<form method="POST" action="{{ route('edit.update',$user->getId()) }}" id="formulario">
+    @csrf
+    @method('PUT')
     <div class="mb-3">
-        <label for="usuario"></label>
-        <input type="text" class="form-control" id="usuario" value="{{ $user->getUsers()}}" >
+        <label for="usuario">Nombre de usuario</label>
+        <input type="text" class="form-control" id="usuario" name="usuario" value="{{ $user->getUsers()}}" >
 
     </div>
     <div class="mb-3">
-        <label for="email"></label>
-        <input type="text" class="form-control" id="email" value="{{ $user->getEmail() }}">
+        <label for="email">Correo Electronico</label>
+        <input type="text" class="form-control" id="email" name="email" value="{{ $user->getEmail() }}">
     </div>
     <div class="mb-3">
-        <label for="password"></label>
-        <input type="text" class="form-control" id="password" value="{{ $user->getPass() }}">
+        <label for="password">Contraseña</label>
+        <input type="text" class="form-control" id="password" name="pass" value="{{ $user->getPass() }}">
     </div>
     <div class="mb-3">
-        <label for="link"></label>
-        <input type="text" class="form-control" id="link" value="{{ $user->getLink() }}">
+        <label for="link">Link</label>
+        <input type="text" class="form-control" id="link" name="link" value="{{ $user->getLink() }}">
     </div>
 
     <button type="submit" class="btn btn-primary bg-primary">Editar</button>

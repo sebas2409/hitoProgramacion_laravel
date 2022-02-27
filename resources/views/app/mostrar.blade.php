@@ -10,6 +10,8 @@
             <th scope="col">link</th>
             <th scope="col">Creado</th>
             <th scope="col">Actualizado</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Eliminar</th>
         </tr>
         </thead>
         <tbody>
