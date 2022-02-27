@@ -26,7 +26,7 @@ class LoginController extends Controller
         }else{
             session_start();
             $_SESSION['id']=$id[7];
-            return redirect()->route('app.principal');
+            return view('app.principal')->with('user',$nombre);
         }
 
 
