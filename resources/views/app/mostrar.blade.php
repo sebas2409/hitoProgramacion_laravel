@@ -13,18 +13,18 @@
         </tr>
         </thead>
         <tbody>
-        @foreach ($users as $user)
-            <tr>
-                <td>{{ $user->getId() }}</td>
-                <td>{{ $user->getUsers() }}</td>
-                <td>{{ $user->getEmail() }}</td>
-                <td>{{ $user->getPass() }}</td>
-                <td>{{ $user->getLink() }}</td>
-                <td>{{ $user->getCreatedAt() }}</td>
-                <td>{{ $user->getUpdate() }}</td>
+        <tr>
+            <td>{{ $user->getId() }}</td>
+            <td>{{ $user->getUsers() }}</td>
+            <td>{{ $user->getEmail() }}</td>
+            <td>{{ $user->getPass() }}</td>
+            <td>{{ $user->getLink() }}</td>
+            <td>{{ $user->getCreatedAt() }}</td>
+            <td>{{ $user->getUpdate() }}</td>
+            <td><a href="{{ route('user.show',['id'=>$user->getId()]) }}" class="btn btn-primary"><i class="bi bi-pencil"></i></a></td>
+            <td><a class="btn btn-danger"><i class="bi bi-trash"></i></a></td>
 
-            </tr>
-        @endforeach
+        </tr>
         </tbody>
     </table>
 @endsection

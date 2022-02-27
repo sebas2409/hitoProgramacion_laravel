@@ -4,6 +4,7 @@ use App\Http\Controllers\ClientsController;
 use App\Http\Controllers\ComprobationController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MostrarController;
+use App\Http\Controllers\UserEditController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -23,3 +24,4 @@ Route::get('/principal',function (){
 })->name('app.principal');
 
 Route::get('/mostrar', [MostrarController::class,'show'])->name('mostrar.show');
+Route::get('/usuario/{id}', [UserEditController::class,'show'])->name('user.show');

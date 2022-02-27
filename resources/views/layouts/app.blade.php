@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <script src="{{ mix('js/app.js') }}"></script>
     <title>@yield('title','Pagina Principal')</title>
 </head>
@@ -21,12 +22,6 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="navbar-brand " aria-current="page" href="{{ route('mostrar.show') }}">Mostrar Datos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="navbar-brand" href="">Editar Datos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="navbar-brand" href="">Eliminar Datos</a>
                 </li>
             </ul>
             <form class="d-flex" method="post" action="">

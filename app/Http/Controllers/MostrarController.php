@@ -14,10 +14,10 @@ class MostrarController extends Controller
         session_start();
         if ($_SESSION['id']== 1){
             $users=Client::all();
-            return view('app.mostrar')->with('users',$users);
+            return view('admin.admostrar')->with('users',$users);
         }else{
             $users=Client::find($_SESSION['id']);
-            return view('admin.admostrar')->with('user',$users);
+            return view('app.mostrar')->with('user',$users);
         }
 
 
